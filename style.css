@@ -1,0 +1,73 @@
+*{ /*resetar a página*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column; /*dizendo q a direção dos elemento é em coluna*/
+    justify-content: center; /*Alinhar horizontal (meio da tela)*/
+    height: 100vh; /*Ocupar espaço completo da página*/
+    align-items: center; /*Alinhar ao centro da página mas é preciso ter o comando acima*/
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1c1b1b;
+}
+
+h1{
+    color: white;
+}
+
+.calculator{
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px; /*espaçamento interno entre os elementos*/
+}
+
+#display{
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: #d1d1d1;
+    text-align: right;
+    font-size: 20px;
+    margin-bottom: 16px;
+
+}
+
+.box-buttons{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr; /*formatar em 4 colunas*/
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; /*formatar em 5 linhas*/
+    gap: 10px;
+}
+
+button{
+    border: none;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+button:hover{
+    background-color: #978c8c;
+    color: #d1d1d1;
+    cursor: pointer;
+    transition: .2s;
+}
+.btn-zero{
+    grid-column: 1 / 3 ;
+}
+
+.btn-result{
+    grid-row: 4 / 6; /*alinhar na linha que eu quero*/
+    height: 100%; /*definir a altura do botão*/
+    grid-column: 4; /*posicionar na coluna onde ele vai*/
+}
+.btn-color{
+    background: #fa4b0b;
+}
+.btn-color:hover{
+    background: #6b2004;
+}
